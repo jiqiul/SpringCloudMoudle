@@ -12,6 +12,8 @@
         <module>springCloudCommon</module>
         <module>springCloudEureka</module>
         <module>springCloudRegistry</module>
+        <module>SpringCloudRibbon</module>
+        <module>springCloudFegin</module>
     </modules>
 
     <parent>
@@ -57,6 +59,24 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
+        </dependency>
+
+        <!-- cloud ribbon组件 负载均衡 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+        </dependency>
+
+        <!-- cloud feign组件 声明式服务 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+
+        <!-- cloud hystrix组件 断路器 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
         <!--lombok-->

@@ -19,6 +19,9 @@ server:
 eureka:
   instance:
     hostname: localhost
+    prefer-ip-address: true # 访问路径可以显示IP
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
   client:
     registerWithEureka: true
     fetchRegistry: true

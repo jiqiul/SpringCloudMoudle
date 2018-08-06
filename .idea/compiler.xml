@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springCloudCommon" />
         <module name="springCloudEureka" />
+        <module name="springCloudFegin" />
         <module name="springCloudRegistry" />
+        <module name="SpringCloudRibbon" />
       </profile>
     </annotationProcessing>
   </component>

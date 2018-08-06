@@ -2,8 +2,10 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringCloudRibbon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springCloudCommon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springCloudEureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springCloudFegin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springCloudRegistry" charset="UTF-8" />
   </component>
 </project>

@@ -22,7 +22,7 @@ public class UserService {
 
     @HystrixCommand(fallbackMethod  = "error")
     public ResponseMsg searchUser(Long id) {
-        Map map = new HashMap();
+        Map map = new HashMap(0);
         map.put("id", id);
         return restTemplate.getForObject("http://spring-cloud-eureka/api/findOne?id={id}", ResponseMsg.class, map);
     }

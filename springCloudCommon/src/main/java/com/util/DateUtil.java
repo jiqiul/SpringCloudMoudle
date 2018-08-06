@@ -543,7 +543,8 @@ public class DateUtil {
 	 */
 	public static String getLastMonthTTwoDay() {
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
-		Calendar cal = Calendar.getInstance();// 获取当前日期
+		 /*获取当前日期*/
+		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.MONTH, -1);
 		cal.set(Calendar.DAY_OF_MONTH, 22);
 		String firstDay = format.format(cal.getTime());
@@ -790,18 +791,21 @@ public class DateUtil {
 	 */
 	public static List<String> getDate(String start, String end) { //
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		List<String> list = new ArrayList<String>(); // 保存日期集合
+		/*保存日期集合*/
+		List<String> list = new ArrayList<String>();
 		Date date_start = null;
 		Date date_end = null;
 		try {
 			date_start = sdf.parse(DateUtil.formatYyMmDd(start));
 			date_end = sdf.parse(DateUtil.formatYyMmDd(end));
 			Date date = date_start;
-			Calendar cd = Calendar.getInstance();// 用Calendar 进行日期比较判断
+			/*用Calendar 进行日期比较判断*/
+			Calendar cd = Calendar.getInstance();
 			while (date.getTime() <= date_end.getTime()) {
 				list.add(sdf.format(date));
 				cd.setTime(date);
-				cd.add(Calendar.DATE, 1);// 增加一天 放入集合
+				/*增加一天 放入集合*/
+				cd.add(Calendar.DATE, 1);
 				date = cd.getTime();
 			}
 		} catch (ParseException e) {

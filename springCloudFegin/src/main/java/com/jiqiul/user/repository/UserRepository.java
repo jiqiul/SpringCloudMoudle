@@ -15,6 +15,11 @@ import org.springframework.web.bind.annotation.RequestParam;
  **/
 @FeignClient(value = "spring-cloud-eureka",fallback = UserErrorService.class)
 public interface UserRepository {
+    /**
+     * 用户接口类
+     * @param id
+     * @return
+     */
     @RequestMapping("/api/findOne")
     public ResponseMsg findById(@RequestParam(name = "id")Long id);
 }

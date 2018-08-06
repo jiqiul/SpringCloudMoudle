@@ -6,6 +6,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 import java.io.Serializable;
 
+/**
+  * @author jiqiul
+  * @create 2018/8/6 21:39
+  * @desc 返回结果集
+  **/
 public class ResponseMsg<T> implements Serializable {
     @JsonIgnore
     public static final String CODE_SUCCESS = "000000";
@@ -80,6 +85,7 @@ public class ResponseMsg<T> implements Serializable {
         this.data = data;
     }
 
+    @Override
     public boolean equals(Object o) {
         if (o == this) {
             return true;
@@ -144,6 +150,7 @@ public class ResponseMsg<T> implements Serializable {
         return other instanceof ResponseMsg;
     }
 
+    @Override
     public int hashCode() {
         int result = 1;
         Object $code = this.getCode();
@@ -157,6 +164,7 @@ public class ResponseMsg<T> implements Serializable {
         return result;
     }
 
+    @Override
     public String toString() {
         return "ResponseMsg(code=" + this.getCode() + ", timestamp=" + this.getTimestamp() + ", msg=" + this.getMsg() + ", data=" + this.getData() + ")";
     }

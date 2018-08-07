@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: elasticsearch
+server:
+  port: 8765
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+
+# 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
+elasticsearch:
+    ip: 127.0.0.1
+    port: 9300
+    pool: 5
+    cluster:
+      name: elasticsearch
+
+
